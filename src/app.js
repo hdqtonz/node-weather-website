@@ -21,7 +21,7 @@ hbs.registerPartials(partialshPath)
 app.use(express.static(dirpath))
 
 // setting up routs for the sample webiste
-app.get('', (req,res)=>{
+app.get('/', (req,res)=>{
     res.render("index", {
         title: 'Weather App',
         name:'Hiten'
@@ -67,14 +67,11 @@ app.get('/weather',(req,res)=>{
         })
     })
 
-    // res.send({
-    //     forcast:'It is raining',
-    //     address: req.query.address
-    // })
 })
 
-
-
+app.listen(port, ()=>{
+    console.log('Server is up on prot ' + port)
+})
 
 
 // app.get('/products',(req,res)=>{
@@ -107,9 +104,7 @@ app.get('/weather',(req,res)=>{
 //     })
 // })
 
-app.listen(port, ()=>{
-    console.log('Server is up on prot ' + port)
-})
+
 
 
 
