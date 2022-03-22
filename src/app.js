@@ -31,7 +31,7 @@ app.get('/', (req,res)=>{
 app.get('/about', (req,res)=>{
     res.render("about", {
         title:'About',
-        dis:'my name is hiten and i love to do proggraming and blogging'
+        dis:'This site create was by hiten. It uses data weather.com '
     })
 })
 
